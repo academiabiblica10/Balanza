@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.balanza-contenedor {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.balanza {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: bottom center;
+    transition: transform 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.brazo {
+    width: 80%;
+    height: 20px;
+    background-color: #333;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.platillo {
+    width: 100px;
+    height: 30px;
+    background-color: #555;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.izquierda {
+    left: 0;
+}
+
+.derecha {
+    right: 0;
+}
+
+.elementos-contenedor {
+    display: flex;
+    gap: 20px;
+}
+
+.elemento {
+    width: 80px;
+    height: 80px;
+    cursor: grab;
+    z-index: 100;
+}
+.pivote {
+    position: absolute;
+    bottom: 20px;
+    width: 20px;
+    height: 150px;
+    background-color: #333;
+    z-index: -1; /* Lo ponemos detrás de la balanza */
+}
+
+.base {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    z-index: -1; /* Lo ponemos detrás de la balanza */
+}
