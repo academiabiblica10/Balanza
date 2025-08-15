@@ -1,0 +1,19 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # Cambia a 'main' si esa es tu rama
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: .
