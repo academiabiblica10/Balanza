@@ -3,7 +3,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main # Asegúrate de que esta sea tu rama principal
 
 jobs:
   deploy:
@@ -17,3 +17,4 @@ jobs:
         with:
           branch: gh-pages
           folder: .
+          token: ${{ secrets.GITHUB_TOKEN }}
